@@ -1,0 +1,180 @@
+/* ==========================================================================
+   CONECTA SAÚDE — RESPONSIVIDADE E ADAPTAÇÃO PARA DISPOSITIVOS MÓVEIS
+   ========================================================================== */
+
+/* Telas Médias e Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .dashboard-grid-patient {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid-doctor {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-aside-card {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .agenda-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-sidebar {
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .booking-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consultas-page-container {
+    flex-direction: column;
+  }
+
+  .consultas-vertical-banner {
+    width: 100%;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .consultas-vertical-text {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 1.6rem;
+  }
+
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-slot-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    padding: 1.2rem;
+  }
+
+  .agenda-slot-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+/* Tablets Pequenos e Celulares (<= 768px) */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-teal);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-lg);
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 0.9rem 1.5rem;
+    border-radius: 0;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .dashboard-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .banner-illustration {
+    display: none;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .custom-table {
+    min-width: 600px;
+  }
+
+  .auth-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .modal-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .time-slots-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .exam-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* Celulares Estreitos (<= 480px) */
+@media (max-width: 480px) {
+  .brand-title-white {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .header-actions .btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.85rem;
+    width: auto;
+  }
+
+  .photo-card img {
+    max-height: 200px;
+  }
+
+  .time-slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .toast-container {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .toast-item {
+    width: 100%;
+  }
+}

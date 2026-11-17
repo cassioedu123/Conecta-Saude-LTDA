@@ -1,0 +1,300 @@
+/* ==========================================================================
+   CONECTA SAÚDE — ESTILOS DA ÁREA DO PROFISSIONAL (profissional.html)
+   ========================================================================== */
+
+/* Layout Principal do Dashboard (Wireframe 4) */
+.dashboard-grid-doctor {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.doctor-aside-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  position: sticky;
+  top: 90px;
+}
+
+.doctor-aside-photo {
+  height: 280px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+}
+
+.doctor-aside-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.doctor-aside-info {
+  padding: 1.5rem;
+}
+
+.doctor-aside-name {
+  color: #1e293b;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.doctor-aside-role {
+  color: var(--primary-teal);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-aside-crm {
+  display: inline-block;
+  background-color: var(--primary-teal-bg);
+  color: var(--primary-teal-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--border-radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   AGENDA PROFISSIONAL & MINI-CALENDÁRIO (Wireframe 6)
+   ========================================================================== */
+
+.agenda-layout-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.agenda-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Mini Calendário */
+.mini-calendar-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid #cbd5e1;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.calendar-header h3 {
+  color: #1e293b;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.cal-nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--primary-teal);
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.cal-nav-btn:hover {
+  background: var(--primary-teal-bg);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 0.6rem;
+}
+
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.cal-day-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.cal-day-cell:hover:not(.empty) {
+  background: var(--primary-teal-light);
+  color: var(--primary-teal-dark);
+}
+
+.cal-day-cell.selected {
+  background-color: var(--accent-orange) !important;
+  color: white !important;
+  font-weight: 800;
+}
+
+.cal-day-cell.has-apps::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--primary-teal);
+  border-radius: 50%;
+}
+
+.cal-day-cell.selected.has-apps::after {
+  background-color: white;
+}
+
+.cal-day-cell.empty {
+  cursor: default;
+}
+
+/* Filtros Rápidos da Agenda */
+.agenda-filters-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.agenda-filters-card h4 {
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.filter-quick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-quick-item {
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.filter-quick-item:hover {
+  background: #f1f5f9;
+  color: var(--primary-teal);
+}
+
+.filter-quick-item.active {
+  background: var(--primary-teal-light);
+  color: var(--primary-teal-dark);
+  font-weight: 700;
+}
+
+/* Painel da Agenda (Tabela de Slots) */
+.agenda-panel {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+}
+
+.agenda-panel-header {
+  padding: 1.2rem 1.6rem;
+  border-bottom: 1.5px solid #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.agenda-date-title {
+  color: #1e293b;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.agenda-view-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: #64748b;
+}
+
+.agenda-slot-row {
+  display: grid;
+  grid-template-columns: 80px 1.4fr 1fr 1.5fr 110px 180px;
+  align-items: center;
+  padding: 1rem 1.6rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.92rem;
+  transition: background 0.15s;
+}
+
+.agenda-slot-row:hover {
+  background-color: #f8fafc;
+}
+
+.agenda-slot-row.occupied {
+  border-left: 4px solid var(--primary-teal);
+}
+
+.agenda-slot-row.free {
+  border-left: 4px solid #cbd5e1;
+  background-color: #fafbfc;
+}
+
+.agenda-slot-time {
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.agenda-slot-patient {
+  color: #0f172a;
+}
+
+.agenda-slot-type {
+  color: #475569;
+}
+
+.agenda-slot-reason {
+  color: #64748b;
+}
+
+.agenda-slot-actions {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
